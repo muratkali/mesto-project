@@ -2,5 +2,7 @@
   max-width: 880px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin: 0 auto;
+  padding-top: 41px;
 }
