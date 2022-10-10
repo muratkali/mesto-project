@@ -1,6 +1,5 @@
 .profile__name {
   font-weight: 500;
-  font-style: medium;
   font-size: 42px;
   line-height: 1.14;
   text-align: left;
@@ -8,5 +7,8 @@
   margin: 0 0 16px;
   padding: 0;
   margin-right: 18px;
-  max-width: 720px;
+  max-width: 294px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
