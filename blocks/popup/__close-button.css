@@ -8,11 +8,21 @@
   margin: 0;
   border: 0;
   background-repeat: no-repeat;
-  right: -38px;
-  top: -38px;
+  background-size: contain;
+  right: -41px;
+  top: -40px;
 }
 
 .popup__close-button:hover {
   cursor: pointer;
   opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__close-button {
+    height: 20px;
+    width: 20px;
+    right: 1px;
+    top: -40px;
+  }
 }

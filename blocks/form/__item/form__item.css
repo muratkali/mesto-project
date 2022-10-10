@@ -22,3 +22,16 @@
 .form__item:focus {
   outline-color: #fff6c5;
 }
+
+.form__item::placeholder {
+  font-size: 14px;
+  font-family: inherit;
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+  .form__item {
+    margin: 0 auto 30px;
+    width: 238px;
+  }
+}
