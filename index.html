@@ -4,33 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Mesto" />
-    <meta
-      name="keywords"
-      content="HTML5, CSS, Adaptive Layout, Grids, Interactive Layout, Ali Muratkali, BEM"
-    />
+    <meta name="keywords" content="HTML5, CSS, Adaptive Layout, Grids, Interactive Layout, Ali Muratkali, BEM" />
     <meta name="author" content="Ali Muratkali" />
     <link rel="stylesheet" type="text/css" href="pages/index.css" />
     <title>Проект: Место</title>
   </head>
   <body class="page">
     <header class="header">
-      <img
-        src="images/logo-white.svg"
-        class="header__logo"
-        alt="Логотип Место"
-      />
+      <img src="images/logo-white.svg" class="header__logo" alt="Логотип Место" />
     </header>
     <main class="content">
       <section class="profile">
-        <img
-          src="images/avatar.png"
-          class="profile__avatar"
-          alt="Лицо Жак Ив Кусто"
-        />
+        <img src="images/avatar.png" class="profile__avatar" alt="Лицо Жак Ив Кусто" />
         <div class="profile__info">
-          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <div class="profile__name-block">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__edit-button"></button>
+          </div>
           <h2 class="profile__bio">Исследователь океана</h2>
-          <button class="profile__edit-button"></button>
         </div>
         <button class="profile__add-button"></button>
       </section>
@@ -42,6 +33,22 @@
           </li>
         </ul>
       </section>
+
+      <div class="form__container">
+        <form class="form__admin">
+          <div class="main__container">
+            <h2 class="form__heading">Задайте параметры</h2>
+
+            <fieldset class="form__input-container form__input-container_ctrl_text_numero_uno">
+              <input type="text" class="form__item form__item_el_heading" />
+              <input type="text" class="form__item form__item_el_subheading" />
+            </fieldset>
+            <div class="form__line"></div>
+            <fieldset class="form__input-container form__input-container_ctrl_text_numero_dos"></fieldset>
+          </div>
+          <fieldset class="form__handlers"></fieldset>
+        </form>
+      </div>
     </main>
     <footer class="footer>"></footer>
   </body>
