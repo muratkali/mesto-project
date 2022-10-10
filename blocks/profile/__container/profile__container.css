@@ -3,3 +3,11 @@
   flex-direction: row;
   max-width: 486px;
 }
+
+@media screen and (max-width: 767px) {
+  .profile__container {
+    flex-direction: column;
+    max-width: 282px;
+    margin-bottom: 32px;
+  }
+}

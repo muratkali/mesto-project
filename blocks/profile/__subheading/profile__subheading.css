@@ -9,4 +9,17 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__subheading {
+    align-self: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+  }
 }
