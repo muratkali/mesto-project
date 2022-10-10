@@ -1,0 +1,11 @@
+.form__item {
+  color: black;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  max-width: 358px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 13px;
+}
