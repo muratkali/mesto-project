@@ -3,10 +3,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 23px 15px 0 21px;
+  padding: 23px 15px 31px 21px;
   margin: 0;
   align-items: center;
-  min-height: 78px;
   background-color: white;
   border-bottom-right-radius: 10px 10px;
   border-bottom-left-radius: 10px 10px;

@@ -1,14 +1,12 @@
 .elements__item {
-  background-image: url(../../../images/kirill-pershin-1088404-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
   display: flex;
   min-height: 361px;
   max-width: 282px;
-  border-radius: 3%;
+  border-radius: 10px;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+  position: relative;
 }
