@@ -9,9 +9,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   max-width: 300px;
 }
 
@@ -20,6 +17,5 @@
     align-self: center;
     text-align: center;
     font-size: 14px;
-    line-height: 1.2;
   }
 }
