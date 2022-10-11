@@ -16,9 +16,6 @@
     font-size: 14px;
     line-height: 19px;
     max-width: 282px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     margin: 0 auto;
   }
 }
