@@ -1,7 +1,7 @@
-.form__admin {
+.form {
 }
 
 @media screen and (max-width: 767px) {
-  .form__admin {
+  .form {
   }
 }

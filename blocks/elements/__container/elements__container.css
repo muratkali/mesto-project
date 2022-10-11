@@ -1,10 +1,13 @@
 .elements__container {
-  max-width: 240px;
+  width: 246px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 23px 0 0;
+  padding: 23px 15px 0 21px;
   margin: 0;
-  margin-left: 21px;
   align-items: center;
+  min-height: 78px;
+  background-color: white;
+  border-bottom-right-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
 }

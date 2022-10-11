@@ -3,9 +3,14 @@
   height: 19px;
   padding: 0;
   margin: 0;
+  border: 0;
+  background-image: url(../../../images/like-button.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
 }
 
 .elements__like-button:hover {
-  opacity: 0.6;
   cursor: pointer;
+  background-image: url(../../../images/filled-heart.svg);
 }

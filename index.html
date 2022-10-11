@@ -20,83 +20,41 @@
           <div class="profile__info">
             <div class="profile__name-block">
               <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <img src="images/edit-button-white.svg" alt="иконка редактирования" class="profile__edit-button" />
+              <button class="profile__edit-button" type="button"></button>
             </div>
             <h2 class="profile__subheading">Исследователь океана</h2>
           </div>
         </div>
-        <img src="images/profile-add-button.svg" alt="иконка c плюсиком" class="profile__add-button" />
+        <button class="profile__add-button"></button>
       </section>
       <section class="elements">
         <ul class="elements__list">
           <li class="elements__item">
-            <div class="elements__info">
-              <div class="elements__container">
-                <h2 class="elements__title">Карачаевск</h2>
-                <img class="elements__like-button" src="/images/Vector2.svg" />
-              </div>
-            </div>
-          </li>
-          <li class="elements__item">
-            <div class="elements__info">
-              <div class="elements__container">
-                <h2 class="elements__title">Карачаевск</h2>
-                <img class="elements__like-button" src="/images/Vector2.svg" alt="пустое сердечко" />
-              </div>
-            </div>
-          </li>
-          <li class="elements__item">
-            <div class="elements__info">
-              <div class="elements__container">
-                <h2 class="elements__title">Гора Эльбрус</h2>
-                <img class="elements__like-button" src="/images/Vector2.svg" alt="пустое сердечко" />
-              </div>
-            </div>
-          </li>
-          <li class="elements__item">
-            <div class="elements__info">
-              <div class="elements__container">
-                <h2 class="elements__title">Домбай</h2>
-                <img class="elements__like-button" src="/images/Vector2.svg" alt="пустое сердечко" />
-              </div>
-            </div>
-          </li>
-          <li class="elements__item">
-            <div class="elements__info">
-              <div class="elements__container">
-                <h2 class="elements__title">Гора Эльбрус</h2>
-                <img class="elements__like-button" src="/images/Vector2.svg" alt="пустое сердечко" />
-              </div>
-            </div>
-          </li>
-          <li class="elements__item">
-            <div class="elements__info">
-              <div class="elements__container">
-                <h2 class="elements__title">Домбай</h2>
-                <img class="elements__like-button" src="/images/Vector2.svg" alt="пустое сердечко" />
-              </div>
+            <div class="elements__container">
+              <h2 class="elements__title">Карачаевск</h2>
+              <button class="elements__like-button" type="button"></button>
             </div>
           </li>
         </ul>
-      </section>
-      <section class="popup popup_opened">
-        <div class="popup__container">
-          <h2 class="form__heading">Редактировать профиль</h2>
-          <button class="popup__close-button" type="button"></button>
-          <form class="form__admin">
-            <fieldset class="form__input">
-              <input type="text" class="form__item" name="firstmame" placeholder="Жак Ив-Кусто" />
-              <input type="text" class="form__item" name="bio" placeholder="Исследователь океана" />
-            </fieldset>
-            <fieldset class="form__handlers">
-              <input type="submit" class="form__button" value="Сохранить" />
-            </fieldset>
-          </form>
-        </div>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Mesto Russia. Ali Muratkali</p>
     </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <h2 class="form__heading">Редактировать профиль</h2>
+        <button class="popup__close-button" type="button"></button>
+        <form class="form" name="edit-profile-bio">
+          <fieldset class="form__input">
+            <input type="text" class="form__item" name="firstmame" placeholder="Жак Ив-Кусто" />
+            <input type="text" class="form__item" name="bio" placeholder="Исследователь океана" />
+          </fieldset>
+          <fieldset class="form__handlers">
+            <input type="submit" class="form__button" value="Сохранить" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
