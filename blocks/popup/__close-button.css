@@ -4,13 +4,14 @@
   height: 32px;
   width: 32px;
   position: absolute;
+  background-position: 50%;
+  right: -41px;
+  top: -40px;
   padding: 0;
   margin: 0;
   border: 0;
   background-repeat: no-repeat;
   background-size: contain;
-  right: -41px;
-  top: -40px;
 }
 
 .popup__close-button:hover {
