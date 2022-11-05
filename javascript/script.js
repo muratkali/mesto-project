@@ -1,65 +1,46 @@
-const container = document.querySelector('.content');
-const popupEdit = document.querySelector('.popup');
-const editButton = document.querySelector('.profile__edit-button');
-const closeButton = document.querySelector('.popup__close-button');
-
-const formElement = document.querySelector('.form__edit-profile-bio');
-
+// переменные
 const profileName = document.querySelector('.profile__name');
 const profileSubtitle = document.querySelector('.profile__subheading');
-
 const profileNameInput = document.querySelector('.form_input_name');
 const profileSubtitleInput = document.querySelector('.form_input_job');
+const popupEditProfile = document.querySelector('.popup_type_edit-profile');
+const popupEditProfileForm = document.querySelector('.form__edit-profile-bio');
 
-// console.log(form_input_name);
-console.log(formElement);
-
+// кнопки
+const editProfileInfoButton = document.querySelector('.profile__edit-button');
+const closeProfileInfoButton = document.querySelector('.popup__close-button');
 
 // открытие попапа редактирования профиля
-function openPopup() {
-    popupEdit.classList.add('popup_opened');
+function openPopup(item) {
+    item.classList.add("popup_opened");
+};
+
+function openPopupEditProfileForm() {
+    popupEditProfile.classList.add('popup_opened');
     profileNameInput.value = profileName.innerText;
     profileSubtitleInput.value = profileSubtitle.innerText;
   }
 
-// закрытие попапа редактирования профиля
+// закрытие попапа, закрытие редактирования профиля
 
-function closePopup() {
-    popupEdit.classList.remove('popup_opened');
+function closePopup(item) {
+    item.classList.remove("popup_opened");
+  };
+
+function closePopupEditProfileForm() {
+    popupEditProfile.classList.remove('popup_opened');
 }
-
-editButton.addEventListener('click', openPopup);
-closeButton.addEventListener('click', closePopup);
 
 // функция изменения био профиля
-
 function handleFormSubmit(evt) {
     evt.preventDefault();
-    profileName.innerText = profileNameInput.value;
-    console.log(profileNameInput.value);
-    profileSubtitle.innerText = profileSubtitleInput.value;
-    closePopup();
+    profileName.textContent = profileNameInput.value;
+    profileSubtitle.textContent = profileSubtitleInput.value;
+    closePopupEditProfileForm();
 }
 
-formElement.addEventListener('sumbit', handleFormSubmit)
+// обработчики событий и функций
+editProfileInfoButton.addEventListener('click', openPopupEditProfileForm);
+closeProfileInfoButton.addEventListener('click', closePopupEditProfileForm);
+popupEditProfileForm.addEventListener('submit', handleFormSubmit)
 
-
-
-
-// let likeElement = document.querySelectorAll('.elements__like-button');
-// function likeElement() {
-//     likeElementButton.classList.add('elements__like-button_clicked');
-// }
-  
-// likeElementButton.addEventListener('click', likeElement);
-
-//   editButton.addEventListener('click', function () {
-//     openPopup(popup);
-//   });
-
-
-// function openPopup() {
-//     editButton.querySelector('.popup').addEventListener('click', function (evt) {
-//         evt.target.classList.add('popup_opened');
-//     })
-// }
