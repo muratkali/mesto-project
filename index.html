@@ -19,7 +19,7 @@
           <img src="./images/chief-keef-face.png" class="profile__avatar" alt="Лицо Чиф Кифа" />
           <div class="profile__info">
             <div class="profile__name-block">
-              <h1 class="profile__name">Ali Muratkali</h1>
+              <h1 class="profile__name">Chief Keef</h1>
               <button class="profile__edit-button" type="button" aria-label="edit"></button>
             </div>
             <h2 class="profile__subheading">Ocean Exporer</h2>
@@ -33,13 +33,13 @@
       </section>
     </main>
     <footer class="footer">
-      <p class="footer__copyright">&copy; 2022 Mesto Russia. Ali Muratkali</p>
+      <p class="footer__copyright">&copy; 2022 Glo Gang. Ali Muratkali</p>
     </footer>
-    <div class="popup_type_edit-profile">
+    <div class="popup popup_type_edit-profile">
       <div class="popup__container">
         <h2 class="popup__heading">Редактировать профиль</h2>
         <button class="popup__close-button" type="button"></button>
-        <form class="form form__edit-profile-bio" name="edit-profile-bio">
+        <form class="form form__edit-profile-bio " name="edit-profile-bio">
           <fieldset class="form__input">
             <input type="text" class="form__item form_input_name" name="firstmame" placeholder="Жак Ив-Кусто" value required/>
             <input type="text" class="form__item form_input_job" name="bio" placeholder="Исследователь океана" value required/>
@@ -50,6 +50,22 @@
         </form>
       </div>
     </div>
+    <div class="popup popup_type_add-item ">
+      <div class="popup__container">
+        <h2 class="popup__heading">New album</h2>
+        <button class="popup__close-button popup__close-button-card" type="button"></button>
+        <form class="form form__add-item" name="add-album">
+          <fieldset class="form__input">
+            <input type="text" class="form__item form_input_image_name" name="firstmame" placeholder="Album Name" value required/>
+            <input type="text" class="form__item form_input_image_link" name="bio" placeholder="Album Cover Link" value required/>
+          </fieldset>
+          <fieldset class="form__handlers">
+            <input type="submit" class="form__button" value="Submit" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
     <template class="template">
       <li class="elements__item">
         <button class="elements__remove-button" type="button" aria-label="delete-button"></button>
