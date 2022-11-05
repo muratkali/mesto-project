@@ -32,6 +32,7 @@ const initialCards = [
 
 // формы
 const popupEditProfileForm = document.querySelector('.form__edit-profile-bio');
+const addItemForm = document.querySelector('.form__add-item');
 
 //попапы
 const popupEditProfile = document.querySelector('.popup_type_edit-profile');
@@ -43,14 +44,16 @@ const profileSubtitle = document.querySelector('.profile__subheading');
 const profileNameInput = document.querySelector('.form_input_name');
 const profileSubtitleInput = document.querySelector('.form_input_job');
 
-
 // кнопки
 const editProfileInfoButton = document.querySelector('.profile__edit-button');
 const closeProfileInfoButton = document.querySelector('.popup__close-button');
 const openItemAddButton = document.querySelector('.profile__add-button');
 const closePopupAddItemFormButton = document.querySelector('.popup__close-button-card');
 
-console.log(closePopupAddItemFormButton);
+// 
+
+const addItemNameInput = document.querySelector('.form_input_image_name');
+const addItemLinkInput = document.querySelector('.form_input_image_link');
 
 // картинки
 const popupItemImage = document.querySelector('.popup__fullscreen-image')
@@ -101,34 +104,56 @@ function handleFormSubmit(evt) {
 }
 
 // геренация фото добавление стрелочной функции 
-    const addNewItem = (itemInfo) => {
+    function addNewItem(itemInfo) {
     const templateItem = elementsTemplate.cloneNode(true);
-    const templateItemTitle = templateItem.querySelector('.elements__title');
+    const templateItemNewTitle = templateItem.querySelector('.elements__title');
     const templateItemImg = templateItem.querySelector(".elements__image");
+    const templateItemTitle = templateItem.querySelector('.elements__title');
     const templateItemLike = templateItem.querySelector(".elements__like-button");
-    const templateItemRemove = templateItem.querySelector(".elements__remove-button")
+    // const templateItemRemove = templateItem.querySelector(".elements__remove-button");
+templateItemLike.addEventListener('click', likeItem);
 
-    templateItemImg.src = itemInfo.link;
     templateItemTitle.textContent = itemInfo.name;
+    templateItemImg.src = itemInfo.link;
     
+    templateItemLike.addEventListener('click', likeItem);
     return templateItem;
+    
     };
 
-    const renderElements = (itemInfo) => {
+    function submitNewItem(event) {
+        event.preventDefault();
+        renderElements({ 
+            name: addItemNameInput.value,
+            link: addItemLinkInput.value,
+        });
+        event.target.reset();
+        closePopupAddItemForm;
+    }
+
+    function renderElements(itemInfo) {
         elementsList.prepend(addNewItem(itemInfo));
     };
 
     initialCards.forEach((itemInfo) => {
         renderElements(itemInfo);
     });
-    
+
+// поставить сердечко
+
+function likeItem(event) {
+    event.target.classList.toggle('elements__like-button_active');
+}
 
 // обработчики событий и функций
 editProfileInfoButton.addEventListener('click', openPopupEditProfileForm);
 closeProfileInfoButton.addEventListener('click', closePopupEditProfileForm);
-popupEditProfileForm.addEventListener('submit', handleFormSubmit);
 openItemAddButton.addEventListener('click', openPopupAddItemForm);
 closePopupAddItemFormButton.addEventListener('click', closePopupAddItemForm);
 
-    
+addItemForm.addEventListener("submit", submitNewItem);
+popupEditProfileForm.addEventListener('submit', handleFormSubmit);
+
+openItemAddButton.addEventListener('click', openPopupAddItemForm);
+
 
