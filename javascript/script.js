@@ -110,16 +110,22 @@ function handleFormSubmit(evt) {
     const templateItemImg = templateItem.querySelector(".elements__image");
     const templateItemTitle = templateItem.querySelector('.elements__title');
     const templateItemLike = templateItem.querySelector(".elements__like-button");
-    // const templateItemRemove = templateItem.querySelector(".elements__remove-button");
+    const templateItemRemove = templateItem.querySelector(".elements__remove-button");
 templateItemLike.addEventListener('click', likeItem);
 
     templateItemTitle.textContent = itemInfo.name;
     templateItemImg.src = itemInfo.link;
     
     templateItemLike.addEventListener('click', likeItem);
+    templateItemRemove.addEventListener('click', deleteItem);
+
     return templateItem;
     
     };
+
+    function deleteItem(event) {
+        event.target.closest('.elements__item').remove();
+    }
 
     function submitNewItem(event) {
         event.preventDefault();
